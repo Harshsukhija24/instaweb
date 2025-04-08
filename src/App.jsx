@@ -21,6 +21,10 @@ function App() {
   };
 
   const handleSelectElement = (elementId) => {
+    if (!elementId) {
+      setSelectedElement(null);
+      return;
+    }
     const element = elements.find((el) => el.id === elementId);
     setSelectedElement(element);
   };

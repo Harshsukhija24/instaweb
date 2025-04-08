@@ -65,7 +65,7 @@ const Canvas = ({
       style: elementStyle,
       onClick: (e) => {
         e.stopPropagation();
-        onSelectElement(element);
+        onSelectElement(element.id);
       },
       onMouseDown: (e) => handleMouseDown(e, element),
     };
@@ -151,7 +151,7 @@ const Canvas = ({
             >
               <div>Drop Hero Section Elements Here</div>
             </div>
-            {/* <div
+            <div
               className={`drop-section ${
                 activeDragSection === "main" ? "active" : ""
               }`}
@@ -160,7 +160,7 @@ const Canvas = ({
               onDrop={(e) => handleDrop(e, "main")}
             >
               <div className="drop-container"></div>
-            </div> */}
+            </div>
             <div
               className={`drop-section ${
                 activeDragSection === "content" ? "active" : ""
